@@ -16,7 +16,7 @@ def home(request):
     if request.method == "POST":
         question=request.POST.get('Question')
         print(question)
-        os.environ['OPENAI_API_KEY']="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"
+        os.environ['OPENAI_API_KEY']="my-api-key"
         embeddings=OpenAIEmbeddings()
         vectorindex_openai = FAISS.load_local("vectorstore",embeddings=embeddings,allow_dangerous_deserialization=True)
         llm=OpenAI(temperature=0.9,max_tokens=500)

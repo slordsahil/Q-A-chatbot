@@ -34,3 +34,5 @@ def home(request):
         
         
     return render(request,"home_page_main.html")
+
+
